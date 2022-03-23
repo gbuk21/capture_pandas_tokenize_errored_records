@@ -1,4 +1,5 @@
 Capture errored records that error with ‘pandas.errors.ParserError: Error tokenizing data. C error: Expected j fields in line j, saw k’
+
 When reading a csv file using pandas, we may encounter error scenarios if column separator is present in the data values as well. Pandas will error in the lines of ‘pandas.errors.ParserError: Error tokenizing data. C error: Expected j fields in line j, saw k’. You will be able to load the files by using on_bad_lines='skip'. When you need to capture the errored records, following approach can be used.
 
 1)	Read each line and find columns by splitting the text using separator value
